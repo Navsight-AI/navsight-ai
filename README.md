@@ -1,6 +1,11 @@
 # Object Detection Project
 
-This project implements an object detection system using computer vision techniques. It is designed to detect and visualize objects in images using a pre-trained model.
+This project implements an object detection system using computer vision techniques. It is designed to detect and visualize objects in images using a pre-trained model. Code will run on a raspberry pi after development and assembled together with other hardware components to form a unit.
+
+Key ideas:
+1. Object Detection
+2. Audio Feedback
+3. Navigation Guide
 
 ## Project Structure
 
