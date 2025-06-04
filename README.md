@@ -1,6 +1,6 @@
 # Object Detection Project
 
-This project implements an object detection system using computer vision techniques. It is designed to detect and visualize objects in images using a pre-trained model. Code will run on a raspberry pi after development and assembled together with other hardware components to form a unit.
+This project implements an object detection system using computer vision techniques. It is designed to detect and visualize objects in images using a pre-trained model. Code will run on a Raspberry Pi after development and will be assembled with other hardware components to form a unit.
 
 Key ideas:
 1. Object Detection
@@ -10,7 +10,7 @@ Key ideas:
 ## Project Structure
 
 ```
-object-detection-project
+navsight-ai
 ├── src
 │   ├── main.py                # Entry point of the application
 │   ├── models
@@ -28,8 +28,8 @@ object-detection-project
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/object-detection-project.git
-   cd object-detection-project
+   git clone https://github.com/wodoame/navsight-ai.git
+   cd navsight-ai
    ```
 
 2. Create a virtual environment (optional but recommended):
@@ -42,20 +42,6 @@ object-detection-project
    ```
    pip install -r requirements.txt
    ```
-
-## Usage
-
-To run the object detection application, execute the following command:
-
-```
-python src/main.py --image path/to/your/image.jpg
-```
-
-Replace `path/to/your/image.jpg` with the path to the image you want to process.
-
-## Object Detection Model
-
-The project utilizes a pre-trained object detection model. The `ObjectDetector` class in `src/models/detector.py` is responsible for loading the model, detecting objects in images, and visualizing the results.
 
 ## Contributing
 
