@@ -2,3 +2,4 @@ docs/personal
 .venv
 *.pyc
 .ipynb_checkpoints
+src/data/local
