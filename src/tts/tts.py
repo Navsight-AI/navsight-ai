@@ -1,12 +1,15 @@
 import pyttsx3
+engine = pyttsx3.init()
 
-def text_to_speech(text, output_file=None, voice_index=0):
-    engine = pyttsx3.init()
+def get_voices():
     voices = engine.getProperty('voices')
-
     print("\nAvailable voices:\n")
     for index, voice in enumerate(voices):
         print(f"{index}: {voice.name} - {voice.id}")
+
+def text_to_speech(text, output_file=None, voice_index=14):
+    voices = engine.getProperty('voices')
+    print('selected voice', voices[voice_index].name if voice_index < len(voices) else "default")
 
     if voice_index < len(voices):
         engine.setProperty('voice', voices[voice_index].id)
@@ -45,4 +48,6 @@ def test_text_to_speech_with_voice():
     
 
 if __name__ == "__main__":
-    test_text_to_speech_with_voice()
+    # test_text_to_speech_with_voice()
+    # text_to_speech('hello world')
+    get_voices()
