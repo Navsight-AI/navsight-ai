@@ -3,3 +3,5 @@ docs/personal
 *.pyc
 .ipynb_checkpoints
 src/data/local
+dataset/
+src/download_coco_dataset.py
