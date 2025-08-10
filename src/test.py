@@ -9,7 +9,7 @@ import time
 class RealTimeYOLO:
     def __init__(self, model_path="src/yolo11n_ncnn_model", conf_threshold=0.5):
         """Initialize the real-time YOLO inference system."""
-        self.model = YOLO(model_path)
+        self.model = YOLO(model_path, task='detect')
         self.conf_threshold = conf_threshold
         self.allowed_names = {
             'person',
@@ -19,13 +19,25 @@ class RealTimeYOLO:
             'book',
             'bus',
             'car',
+            'motorcycle',
             'bed',
             'truck',
             'chair',
             'cell phone', 
-            'mouse', 
+            'mouse', -
             'keyboard',
             'laptop',
+            'tie',
+            'bottle',
+            'remote',
+            'tv', 
+            'couch',
+            'cup',
+            'spoon',
+            'fork',
+            'knife',
+            'bowl',
+            'clock'
             }
         
         # For detection tracking
@@ -123,7 +135,7 @@ def run_pi_camera_inference():
             cv2.imshow('Real-time YOLO Detection', annotated_frame)
             
             # Check for quit
-            if cv2.waitKey(yolo_system.detection_interval * 1000) & 0xFF == ord('q'):
+            if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
                 
     except KeyboardInterrupt:
