@@ -7,7 +7,7 @@ def get_voices():
     for index, voice in enumerate(voices):
         print(f"{index}: {voice.name} - {voice.id}")
 
-def text_to_speech(text, output_file=None, voice_index=14):
+def text_to_speech(text, output_file=None, voice_index=27):
     voices = engine.getProperty('voices')
     print('selected voice', voices[voice_index].name if voice_index < len(voices) else "default")
 
@@ -49,5 +49,5 @@ def test_text_to_speech_with_voice():
 
 if __name__ == "__main__":
     # test_text_to_speech_with_voice()
-    # text_to_speech('hello world')
+    text_to_speech('This is a very long text that needs to be spoken aloud using the selected voice.', voice_index=27)
     get_voices()
